@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import {
   BrowserRouter,
+  HashRouter,
   Routes,
   Route,
 } from "react-router-dom";
@@ -19,7 +20,7 @@ function App() {
 
   return (
     <div className={darkMode ? "app dark" : "app"}>
-    <BrowserRouter>
+    <HashRouter>
     <Routes>
       <Route path="/">
         <Route index element={<Home />} />
@@ -36,7 +37,7 @@ function App() {
         </Route>
       </Route>
     </Routes>
-    </BrowserRouter>
+    </HashRouter>
     </div>
   );
 }
